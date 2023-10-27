@@ -6,6 +6,8 @@
 go run main.go
 ```
 
+mac users can run it simply by double click main(unix executable file)
+
 ## Then you have to enter two things in terminal
 
 - node-endpoint(public node is ok)
