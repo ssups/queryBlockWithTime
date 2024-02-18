@@ -11,13 +11,19 @@ import (
 
 type QueryTool struct {
 	client *ethclient.Client
+	Count  int
 }
 
 func NewQueryTool(c *ethclient.Client) *QueryTool {
 	return &QueryTool{client: c}
 }
 
+func (q *QueryTool) InitCount() {
+	q.Count = 0
+}
+
 func (q *QueryTool) BinarySearch(target, low, high uint64) (uint64, uint64) {
+	q.Count++
 	if high < low {
 		log.Fatal("High must be bigger than low")
 	}

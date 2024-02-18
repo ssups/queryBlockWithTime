@@ -48,7 +48,9 @@ func main() {
 	curbn := util.SeperateFatal(client.BlockNumber(context.Background()))
 	qt := service.NewQueryTool(client)
 
+	qt.InitCount()
 	resbn, timestamp := qt.BinarySearch(target, 0, curbn)
+	fmt.Printf("total rpc call: %v\n", qt.Count)
 	fmt.Printf("Block number: %v\nMined at: %v\n", resbn, time.Unix(int64(timestamp), 0).UTC().Format(TIME_LAYOUT))
 
 }

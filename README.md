@@ -1,12 +1,6 @@
 # Query specific block using block timestamp
 
-## You can run by
-
-```shell
-go run main.go
-```
-
-mac users can run it simply by double click main(unix executable file)
+## You can run with binary files in /bin
 
 ## Then you have to enter two things in terminal
 
